@@ -32,4 +32,12 @@ const notes = [
     }
 ]
 
+const noteAboutToday = {
+    id: 5,
+    subject: "JavaScript Arrays and iteration",
+    date: "05/27/21",
+    feeling: "Not as stressed as i thought i was going to be",
+    timeSpent: 360
+}
+notes.push(noteAboutToday);
 console.log(notes);
