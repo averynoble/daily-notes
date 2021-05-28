@@ -41,11 +41,24 @@ const noteAboutToday = {
 }
 notes.push(noteAboutToday);
 
-for (const note of notes) {
+/*for (const note of notes) {
     console.log(`
     Note ${note.id}
     The date was ${note.date}
     I learned about ${note.subject}
     I spent ${note.timeSpent} minutes working on it
     I was feeling ${note.feeling}.`)
+}*/
+const searchTerm = "Nervous";
+
+for (const note of notes) {
+    if (note.feeling == searchTerm) {
+        console.log(`
+        Note ${note.id}
+        The date was ${note.date}
+        I learned about ${note.subject}
+        I spent ${note.timeSpent} minutes working on it
+        I was feeling ${note.feeling}.`)
+    }
+    
 }
