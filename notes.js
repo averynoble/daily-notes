@@ -68,7 +68,7 @@ const createNote = (note) => {
     const currentLastNote = notes[lastIndex]
     const maxId = currentLastNote.id
     const idForNewNote = maxId + 1
-
+    note.dateCreated = Date.now()
     note.id = idForNewNote
     notes.push(note)
 }
