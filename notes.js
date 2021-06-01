@@ -49,9 +49,9 @@ notes.push(noteAboutToday);
     I spent ${note.timeSpent} minutes working on it
     I was feeling ${note.feeling}.`)
 }*/
-const searchTerm = "Nervous";
+// const searchTerm = "Nervous";
 
-for (const note of notes) {
+ /*for (const note of notes) {
     if (note.feeling == searchTerm) {
         console.log(`
         Note ${note.id}
@@ -61,4 +61,25 @@ for (const note of notes) {
         I was feeling ${note.feeling}.`)
     }
     
+} */
+
+const createNote = (note) => {
+    const lastIndex = notes.length - 1
+    const currentLastNote = notes[lastIndex]
+    const maxId = currentLastNote.id
+    const idForNewNote = maxId + 1
+
+    note.id = idForNewNote
+    notes.push(note)
 }
+
+const moreNewerNote = {
+    subject: "JavaScript Functions in Arrays",
+    date: "06/01/21",
+    feeling: "Feeling more confident",
+    timeSpent: 360
+}
+
+createNote(moreNewerNote)
+
+console.log(notes)
